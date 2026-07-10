@@ -22,7 +22,7 @@ function WoodDetail() {
         {/* Keep this div so your existing CSS works */}
         <div className="wood-image">
           {/* Add image later */}
-          {/* <img src={wood.image} alt={wood.name} /> */}
+          <img src={wood.image} alt={wood.name} />
         </div>
 
         <div className="wood-content">

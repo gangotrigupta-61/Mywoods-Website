@@ -8,14 +8,21 @@ import { Link } from "react-router-dom";
       const navigate = useNavigate();
 
 
-   const handleLogout = () => {
-    localStorage.clear()
-     navigate("/"); 
-    window.location.reload(true);
+        const handleLogout = () => {
+        localStorage.clear();
+         navigate("/");
+         };
+
+
+
+  //  const handleLogout = () => {
+  //   localStorage.clear()
+  //    navigate("/"); 
+  //   window.location.reload(true);
     
      // Navigate to Home
   
-  }
+  // }
 
         return(
             <>

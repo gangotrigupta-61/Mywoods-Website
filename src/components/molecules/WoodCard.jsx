@@ -42,7 +42,9 @@ function WoodCard({ wood }) {
 
       {/* Image placeholder (add later) */}
       <div className="wood-image">
-        {/* <img src={wood.image} alt={wood.name} /> */}
+
+        <img src={wood.image} alt={wood.name} />
+        
         <span className="rating">
           {wood.available ? "✅ Available" : "❌ Out of Stock"}
         </span>
