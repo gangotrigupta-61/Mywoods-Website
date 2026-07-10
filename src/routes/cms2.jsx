@@ -77,7 +77,7 @@ function CMS2(){
                 available:true,
             };
             
-            const response= await fetch("https://mywoods-api.onrender.com/api/woods",{
+            const response= await fetch("https://mywoods-backend-kvs4.onrender.com/api/woods",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json",
@@ -110,7 +110,7 @@ function CMS2(){
 
     const callDeleteAPI= async()=>{
         try{
-            const response= await fetch("https://mywoods-api.onrender.com/api/woods/"+id,{
+            const response= await fetch("https://mywoods-backend-kvs4.onrender.com/api/woods/"+id,{
                 method:"DELETE",
                  headers:{
                     "Content-Type":"application/json",
@@ -153,7 +153,7 @@ function CMS2(){
             };
 
 
-            const response= await fetch("https://mywoods-api.onrender.com/api/woods/"+id,{
+            const response= await fetch("https://mywoods-backend-kvs4.onrender.com/api/woods/"+id,{
                 method:"PUT",
                  headers:{
                     "Content-Type":"application/json",
