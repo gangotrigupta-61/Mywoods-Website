@@ -30,8 +30,15 @@ import { Link } from "react-router-dom";
           <li><Link to="/woods">Woods</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
-
-               {localStorage.getItem('token') ? <li><a href="/cms2">CMS</a></li> : <li><a href="/login">Login</a></li>}
+                    {localStorage.getItem("token") ? (
+                       <li>
+                      <Link to="/cms2">CMS</Link>
+                      </li>
+                    ) : (
+                 <li>
+              <Link to="/login">Login</Link>
+              </li>
+              )}
 
           {/* <li><Link to="/cms">CMS</Link></li> */}
 
