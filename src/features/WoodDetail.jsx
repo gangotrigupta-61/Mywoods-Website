@@ -7,7 +7,7 @@ function WoodDetail() {
   const [wood, setWood] = useState(null);
 
   useEffect(() => {
-    fetch(`https://mywoods-api.onrender.com/api/woods/${id}`)
+    fetch(`https://mywoods-backend-kvs4.onrender.com/api/woods/${id}`)
       .then((res) => res.json())
       .then((data) => setWood(data))
       .catch((err) => console.log(err));
