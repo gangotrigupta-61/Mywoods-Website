@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import WoodCard from "../components/molecules/WoodCard";
 import './../global.css';
 
-
     function Homepage(){
         //  const featuredWoods = woods.slice(0,3);
         return(

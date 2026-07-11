@@ -36,6 +36,9 @@
 
 
 
+
+
+
 .footer{
     background:#1E1E1E;
     color:white;
@@ -74,6 +77,118 @@
 .copyright{
     text-align:center;
     color:#ccc;
+}
+
+
+
+
+
+/* HERO */
+
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.hero-content{
+
+    width:70%;
+
+}
+
+.hero h1{
+
+    font-size:4rem;
+
+    margin:20px 0;
+
+}
+
+.hero span{
+
+    color:#D4AF37;
+
+}
+
+.hero-text{
+
+    font-size:1.2rem;
+
+    margin-bottom:40px;
+
+    line-height:1.8;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.btn-primary{
+
+    background:#A67C52;
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    background:#8B5E3C;
+
+}
+
+.btn-secondary{
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+.btn-secondary:hover{
+
+    background:white;
+
+    color:#2E5E4E;
+
 }
 
 
@@ -237,114 +352,6 @@
 }
 
 
-
-/* HERO */
-
-.hero{
-
-    height:100vh;
-
-    background:
-    linear-gradient(rgba(0,0,0,.55),
-    rgba(0,0,0,.55)),
-    url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80");
-
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-
-    color:white;
-
-}
-
-.hero-content{
-
-    width:70%;
-
-}
-
-.hero h1{
-
-    font-size:4rem;
-
-    margin:20px 0;
-
-}
-
-.hero span{
-
-    color:#D4AF37;
-
-}
-
-.hero-text{
-
-    font-size:1.2rem;
-
-    margin-bottom:40px;
-
-    line-height:1.8;
-
-}
-
-.hero-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-}
-
-.btn-primary,
-.btn-secondary{
-
-    padding:15px 35px;
-
-    border-radius:40px;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.4s;
-
-}
-
-.btn-primary{
-
-    background:#A67C52;
-    color:white;
-
-}
-
-.btn-primary:hover{
-
-    background:#8B5E3C;
-
-}
-
-.btn-secondary{
-
-    border:2px solid white;
-
-    color:white;
-
-}
-
-.btn-secondary:hover{
-
-    background:white;
-
-    color:#2E5E4E;
-
-}
 
 /* Featured */
 

@@ -1,16 +1,103 @@
-# React + Vite
+# TimberCraft Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+TimberCraft is a React and Vite web application for showcasing wood products, browsing a product catalog, viewing individual wood details, and managing catalog entries through a simple CMS interface.
 
-Currently, two official plugins are available:
+The project uses a shared application shell with a persistent header and footer, public marketing pages, a dynamic woods catalog, a wood detail page, and a token-based login flow that reveals the CMS navigation after authentication.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Public home, about, and contact pages.
+- Woods catalog powered by a remote API.
+- Individual wood detail pages loaded from a route parameter.
+- Login form that stores an auth token in `localStorage`.
+- CMS screen for listing, creating, editing, and deleting wood records.
+- Shared header and footer across the full app.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the Oxlint configuration
+- React 19
+- Vite
+- React Router DOM 7
+- Bootstrap 5
+- React Bootstrap
+- React Icons
+- Oxlint
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Project Structure
+
+- `src/main.jsx` bootstraps the app and wraps it in `BrowserRouter`.
+- `src/App.jsx` defines the main routes and shared layout.
+- `src/components/compound/Header.jsx` contains the main navigation and auth-aware links.
+- `src/components/compound/Footer.jsx` contains the site footer.
+- `src/features/` contains the page-level UI for home, about, contact, woods, and wood detail views.
+- `src/routes/` contains route wrappers and the CMS/login screens.
+- `src/components/molecules/WoodCard.jsx` renders each wood card in the catalog.
+
+## Routes
+
+- `/` - Home
+- `/about` - About page
+- `/contact` - Contact page
+- `/woods` - Woods catalog
+- `/woods/:id` - Wood detail page
+- `/login` - Login form
+- `/cms2` - CMS dashboard for authenticated users
+
+## API Usage
+
+The app currently communicates with remote backend services:
+
+- Woods list and CMS CRUD: `https://mywoods-backend-kvs4.onrender.com/api/woods`
+- Login: `https://mywoods-backend-kvs4.onrender.com/api/auth/login`
+- Wood detail page: `https://mywoods-api.onrender.com/api/woods/:id`
+
+Authentication is client-side and depends on the token stored in `localStorage`.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18 or newer
+- npm
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run the Development Server
+
+```bash
+npm run dev
+```
+
+Then open the local URL shown in the terminal.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview the Production Build
+
+```bash
+npm run preview
+```
+
+### Lint the Codebase
+
+```bash
+npm run lint
+```
+
+## Notes
+
+- The woods catalog is data-driven and will not render correctly if the backend API is unavailable.
+- The CMS navigation appears only when a token exists in `localStorage`.
+- The current design uses Bootstrap alongside custom project styles in `src/global.css` and related CSS files.
+
+Open for collaboration and ThankYou for visiting TimberCraft.
+
+

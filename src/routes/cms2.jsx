@@ -58,24 +58,29 @@ function CMS2(){
         
         
     };
-    const [name,setName]=useState("");
-    const [description,setDescription]=useState("");
-    const [origin,setorigin]=useState("");
-     const [color,setColor]=useState("");
+
+ const [name,setName]=useState("");
+const [description,setDescription]=useState("");
+const [origin,setorigin]=useState("");
+const [color,setColor]=useState("");
+
+const [type,setType]=useState("hardwood");
+const [image,setImage]=useState("");
     
  // POST API Call
     const callPOSTAPI= async()=>{
         try{
             const raw={
-                name:name,
-                type:"hardwood",
-                origin:origin,
-                color:color,
-                density:770,
-                pricePerUnit:45.5,
-                description:description,
-                available:true,
-            };
+         name,
+          type,
+          origin,
+           color,
+         density:770,
+         pricePerUnit:45.5,
+         description,
+        available:true,
+           image
+};
             
             const response= await fetch("https://mywoods-backend-kvs4.onrender.com/api/woods",{
                 method:"POST",
@@ -279,7 +284,7 @@ function CMS2(){
 </Modal.Header>
 
 <Modal.Body>
-
+{/* 
 <label>Name</label>
 
 <input type="text" onChange={(e) => setName(e.target.value)} />
@@ -301,6 +306,58 @@ function CMS2(){
 <label>Origin</label>
 
 <input type="text" onChange={(e) => setorigin(e.target.value)} />
+<hr />
+ */}
+
+<label>Name</label>
+<input
+    type="text"
+    onChange={(e)=>setName(e.target.value)}
+/>
+
+<hr />
+
+<label>Type</label>
+<select
+    onChange={(e)=>setType(e.target.value)}
+>
+    <option value="hardwood">Hardwood</option>
+    <option value="softwood">Softwood</option>
+</select>
+
+<hr />
+
+<label>Description</label>
+<input
+    type="text"
+    onChange={(e)=>setDescription(e.target.value)}
+/>
+
+<hr />
+
+<label>Color</label>
+<input
+    type="text"
+    onChange={(e)=>setColor(e.target.value)}
+/>
+
+<hr />
+
+<label>Origin</label>
+<input
+    type="text"
+    onChange={(e)=>setorigin(e.target.value)}
+/>
+
+<hr />
+
+<label>Image URL</label>
+<input
+    type="text"
+    placeholder="https://example.com/image.jpg"
+    onChange={(e)=>setImage(e.target.value)}
+/>
+
 <hr />
 
 
