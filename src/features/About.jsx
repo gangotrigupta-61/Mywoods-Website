@@ -5,7 +5,7 @@ import "../global.css";
             <>
              {/* Hero */}
 
-            <section className="about-hero">
+            {/* <section className="about-hero">
 
                 <div className="about-overlay">
 
@@ -17,7 +17,7 @@ import "../global.css";
 
                 </div>
 
-            </section>
+            </section> */}
 
 
             {/* Story */}
@@ -140,7 +140,7 @@ import "../global.css";
 
             {/* Values */}
 
-            <section className="values">
+            {/* <section className="values">
 
                 <h2>Our Core Values</h2>
 
@@ -163,12 +163,12 @@ import "../global.css";
 
                 </div>
 
-            </section>
+            </section> */}
 
 
             {/* CTA */}
 
-            <section className="about-cta">
+            {/* <section className="about-cta">
 
                 <h2>Build Something Timeless</h2>
 
@@ -177,16 +177,16 @@ import "../global.css";
                     Explore our premium collection of woods
                     and bring your ideas to life.
 
-                </p>
+                </p> */}
 
-                <Link
+                {/* <Link
                     className="btn-primary"
                     to="/woods"
                 >
                     Explore Collection
                 </Link>
 
-            </section>
+            </section> */}
             </>
         )
     }
