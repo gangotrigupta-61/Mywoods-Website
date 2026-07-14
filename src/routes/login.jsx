@@ -1,12 +1,12 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 
+import { toast } from "react-toastify";
+
 export default function Login(){
  
      const navigate = useNavigate();
 
-
-  
     const [email, setEmail] = useState(null)
     const [password, setPassword] = useState(null)
 
@@ -29,28 +29,47 @@ export default function Login(){
     }),
             });
 
+
+             const result = await response.json();
+  
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                 toast.error(result.message || "Account does not exist");
+                //   throw new Error(`HTTP error! Status: ${response.status}`);
+                  return;
             }
-            else{
+            // else{
                 //  alert("Login Successful");
 
-                // Redirect to Home
-                navigate("/");
-            }
+            //     // Redirect to Home
+            //    toast.success("Login Successful!");
+            //     navigate("/");
+            // }
 
-            const result = await response.json();
-
-            localStorage.setItem("token",result?.token)
-
-            window.location.reload(true);
            
-            console.log(result);
+            localStorage.setItem("token",result?.token)
+             toast.success("Login Successful!");
+
+        // Wait so the toast is visible
+        setTimeout(() => {
+            navigate("/");
+        }, 1000);
+
+
+            // window.location.reload(true);
+           
+            // console.log(result);
+
+
+       
+
 
         } catch (error) {
             console.error("Error:", error);
         }
     }
+
+
+    
 
     return(
         <>
@@ -70,6 +89,13 @@ export default function Login(){
     />
 
     <button onClick={handleLogin}>Login</button>
+    <br />
+
+    <p>Didn't have an Account? 
+        <button onClick={() => navigate("/register")} >Register</button>
+
+       
+        </p>
 </div>
         </>
     )

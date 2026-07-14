@@ -1,4 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import About from "./routes/About";
 import Contact from "./routes/Contact";
 import Woods from "./routes/Woods/pages";
@@ -10,6 +13,7 @@ import CMS2 from "./routes/cms2";
 import CMS3 from "./routes/cms3";
 import Login from "./routes/login";
 import Pagesmain from "./routes/Woods/[id]/pages";
+import Register from "./routes/register";
 
 function App(){
   return(
@@ -18,8 +22,13 @@ function App(){
     <Header/>
 
     <hr />
+         <ToastContainer
+        position="top-right"
+        autoClose={2000}
+      />
 
     <Routes> 
+      
       
    <Route path="/" element={<Home/>}/> 
        <Route path="/about" element={<About/>}/>
@@ -36,7 +45,8 @@ function App(){
 
         {/* <Route path="/cms3" element={<CMS3/>}/>  */}
         
-          <Route path="/login" element={<Login/>}/> 
+          <Route path="/login" element={<Login/>}/>
+           <Route path="/register" element={<Register/>}/> 
      
     </Routes>
 

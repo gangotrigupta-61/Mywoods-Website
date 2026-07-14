@@ -3,6 +3,8 @@ import {FaEdit,FaTrash} from "react-icons/fa";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../global.css';
+import { toast } from "react-toastify";
+
 
 function CMS2(){
 
@@ -89,12 +91,22 @@ const [image,setImage]=useState("");
                 },
                 body:JSON.stringify(raw),
             });
-
+const result= await response.json();
             if(!response.ok){
-                throw new Error(`HTTP error!Status:${response.status}`)
+                // throw new Error(`HTTP error!Status:${response.status}`)
+                toast.error(
+    result.error ||
+    result.message ||
+    JSON.stringify(result) ||
+    "Failed to add wood!"
+);
+    return;
             }
 
-             const result= await response.json();
+
+toast.success("Wood added successfully!");
+
+             
 
              console.log(result);
              handleClose();
@@ -103,7 +115,8 @@ const [image,setImage]=useState("");
         }
 
         catch(error){
-            console.log("Error:",error);
+              console.error(error);
+    toast.error(error.message || "Something went wrong!");
         }
         
         
