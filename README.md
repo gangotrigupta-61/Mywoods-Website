@@ -1,19 +1,25 @@
-# TimberCraft Website
+# TimberCraft Website 🌲
 
-TimberCraft is a React and Vite web application for showcasing wood products, browsing a product catalog, viewing individual wood details, and managing catalog entries through a simple CMS interface.
+TimberCraft is a React and Vite-based woods marketplace website designed to showcase wood products, display item details, and manage catalog content through a streamlined CMS experience.
 
-The project uses a shared application shell with a persistent header and footer, public marketing pages, a dynamic woods catalog, a wood detail page, and a token-based login flow that reveals the CMS navigation after authentication.
+The frontend uses a shared layout with a persistent header and footer, public marketing pages, a dynamic woods catalog, route-based product details, and a token-based login flow that reveals CMS navigation after authentication.
 
-## Features
+## Live Links 🔗
 
-- Public home, about, and contact pages.
-- Woods catalog powered by a remote API.
-- Individual wood detail pages loaded from a route parameter.
-- Login form that stores an auth token in `localStorage`.
-- CMS screen for listing, creating, editing, and deleting wood records.
-- Shared header and footer across the full app.
+- Live Demo: https://timbercraftwoods.vercel.app/ ✨
+- Backend Deployment: https://mywoods-backend-kvs4.onrender.com 🚀
+- Backend GitHub Repo: https://github.com/gangotrigupta-61/MyWoods-Backend 💻
 
-## Tech Stack
+## Features ✨
+
+- Responsive home, about, and contact pages.
+- Woods catalog powered by a backend API.
+- Dynamic wood detail pages using route parameters.
+- Login flow that stores an JWT auth token in `localStorage`.
+- CMS interface for listing, creating, editing, and deleting wood records.
+- Shared header and footer across the application.
+
+## Tech Stack 🛠️
 
 - React 19
 - Vite
@@ -23,7 +29,7 @@ The project uses a shared application shell with a persistent header and footer,
 - React Icons
 - Oxlint
 
-## Project Structure
+## Project Structure 📁
 
 - `src/main.jsx` bootstraps the app and wraps it in `BrowserRouter`.
 - `src/App.jsx` defines the main routes and shared layout.
@@ -33,7 +39,7 @@ The project uses a shared application shell with a persistent header and footer,
 - `src/routes/` contains route wrappers and the CMS/login screens.
 - `src/components/molecules/WoodCard.jsx` renders each wood card in the catalog.
 
-## Routes
+## Routes 🧭
 
 - `/` - Home
 - `/about` - About page
@@ -43,17 +49,17 @@ The project uses a shared application shell with a persistent header and footer,
 - `/login` - Login form
 - `/cms2` - CMS dashboard for authenticated users
 
-## API Usage
+## API Integration 🔌
 
-The app currently communicates with remote backend services:
+The frontend communicates with the deployed backend for authentication and wood data.
 
-- Woods list and CMS CRUD: `https://mywoods-backend-kvs4.onrender.com/api/woods`
-- Login: `https://mywoods-backend-kvs4.onrender.com/api/auth/login`
-- Wood detail page: `https://mywoods-api.onrender.com/api/woods/:id`
+- Woods list and CMS CRUD: https://mywoods-backend-kvs4.onrender.com/api/woods
+- Login: https://mywoods-backend-kvs4.onrender.com/api/auth/login
+- Wood detail page: https://mywoods-api.onrender.com/api/woods/:id
 
-Authentication is client-side and depends on the token stored in `localStorage`.
+Authentication is handled on the client side and depends on the token stored in `localStorage`.
 
-## Getting Started
+## Getting Started 🚀
 
 ### Prerequisites
 
@@ -72,7 +78,7 @@ npm install
 npm run dev
 ```
 
-Then open the local URL shown in the terminal.
+Then open the local URL shown in the terminal to preview the site.
 
 ### Build for Production
 
@@ -92,12 +98,12 @@ npm run preview
 npm run lint
 ```
 
-## Notes
+## Notes 📝
 
-- The woods catalog is data-driven and will not render correctly if the backend API is unavailable.
-- The CMS navigation appears only when a token exists in `localStorage`.
-- The current design uses Bootstrap alongside custom project styles in `src/global.css` and related CSS files.
+- The woods catalog depends on the backend API and will not render correctly if the service is unavailable.
+- The CMS navigation appears only when a valid token exists in `localStorage`.
+- The current UI uses Bootstrap alongside custom styles in `src/global.css` and related CSS files.
 
-Open for collaboration and ThankYou for visiting TimberCraft.
+Open to collaboration and open to constructive feedback for future improvements. 🤝
 
 
